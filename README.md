@@ -12,7 +12,7 @@ Editor extensions for [C0DATA](https://github.com/trans/c0data) — a structured
 
 ### Features
 
-**Syntax highlighting** — TextMate grammar that recognizes all 11 C0DATA control picture glyphs and the structures they form.
+**Syntax highlighting** — TextMate grammar that recognizes all 12 C0DATA control picture glyphs and the structures they form.
 
 **Column formatter** — Three modes for tabular data:
 
@@ -38,9 +38,10 @@ Built-in sets:
 | EOT | ␄ | ■ |
 | ENQ | ␅ | § |
 | DLE | ␐ | ⧵ |
+| ETB | ␗ | ✓ |
 | SUB | ␚ | ⇄ |
 
-**Input method** — Type `\gs` then space to insert `␝`. Works for all 11 codes: `\fs`, `\gs`, `\rs`, `\us`, `\soh`, `\stx`, `\etx`, `\eot`, `\enq`, `\dle`, `\sub`. Escape with `\\gs` to get the literal text `\gs`. Also provides autocomplete when typing `\`.
+**Input method** — Type `\gs` then space to insert `␝`. Works for all 12 codes: `\fs`, `\gs`, `\rs`, `\us`, `\soh`, `\stx`, `\etx`, `\eot`, `\enq`, `\dle`, `\etb`, `\sub`. Escape with `\\gs` to get the literal text `\gs`. Also provides autocomplete when typing `\`.
 
 ### Commands
 
@@ -78,7 +79,7 @@ cd vscode
 npm install
 npx tsc -p ./
 npx @vscode/vsce package --allow-missing-repository
-code --install-extension c0data-0.1.0.vsix --force
+code --install-extension c0data-0.2.0.vsix --force
 ```
 
 ### File Extensions

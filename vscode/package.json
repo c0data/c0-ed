@@ -2,7 +2,7 @@
   "name": "c0data",
   "displayName": "C0DATA",
   "description": "Syntax highlighting and column alignment for C0DATA files",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "trans",
   "license": "MIT",
   "repository": {
@@ -68,7 +68,7 @@
       "properties": {
         "c0data.glyphSets": {
           "type": "object",
-          "description": "Custom glyph sets. Each key is a set name, each value is an object mapping the 11 control code roles to display characters.",
+          "description": "Custom glyph sets. Each key is a set name, each value is an object mapping the 12 control code roles to display characters.",
           "additionalProperties": {
             "type": "object",
             "properties": {
@@ -82,6 +82,7 @@
               "EOT": { "type": "string", "description": "End of transmission" },
               "ENQ": { "type": "string", "description": "Reference" },
               "DLE": { "type": "string", "description": "Escape" },
+              "ETB": { "type": "string", "description": "Commit marker (stream mode)" },
               "SUB": { "type": "string", "description": "Substitution" }
             }
           },
@@ -91,7 +92,7 @@
     },
     "configurationDefaults": {
       "[c0data]": {
-        "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?␜␝␞␟␁␂␃␄␅␐␚◆◇▸·‡◖◗■§⧵⇄",
+        "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?␜␝␞␟␁␂␃␄␅␐␗␚◆◇▸·‡◖◗■§⧵✓⇄",
         "editor.unicodeHighlight.allowedCharacters": {
           "␜": true,
           "␝": true,
@@ -103,6 +104,7 @@
           "␄": true,
           "␅": true,
           "␐": true,
+          "␗": true,
           "␚": true,
           "◆": true,
           "◇": true,
@@ -114,6 +116,7 @@
           "■": true,
           "§": true,
           "⧵": true,
+          "✓": true,
           "⇄": true
         }
       }

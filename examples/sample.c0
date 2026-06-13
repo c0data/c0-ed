@@ -47,3 +47,7 @@
     ␝ address
       ␞ type ␟ ␅address
       ␞ req  ␟ true
+
+␝ claims (stream log)
+  ␞ create ␟ a1b2c3 ␟ 1718208000 ␗
+  ␞ name   ␟ draft-2 ␟ 1718208042 ␗

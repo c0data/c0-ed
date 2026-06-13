@@ -12,10 +12,11 @@ const CONTROL_PICTURES = [
   "\u2404", // EOT — end of transmission
   "\u2405", // ENQ — reference
   "\u2410", // DLE — escape
+  "\u2417", // ETB — commit marker / stream mode
   "\u241A", // SUB — substitution
 ];
 
-// Built-in glyph sets for display. Each maps the 11 control pictures to
+// Built-in glyph sets for display. Each maps the 12 control pictures to
 // presentation characters. The file always contains Control Pictures;
 // these are CSS-only overlays.
 const GLYPH_SETS: Record<string, string[]> = {
@@ -30,12 +31,13 @@ const GLYPH_SETS: Record<string, string[]> = {
     "■", // EOT — black square
     "§", // ENQ — section sign
     "⧵", // DLE — reverse solidus
+    "✓", // ETB — commit marker
     "⇄", // SUB — swap arrows
   ],
 };
 
-// Order of the 11 codes in a glyph set array
-const CODE_KEYS = ["FS", "GS", "RS", "US", "SOH", "STX", "ETX", "EOT", "ENQ", "DLE", "SUB"];
+// Order of the 12 codes in a glyph set array
+const CODE_KEYS = ["FS", "GS", "RS", "US", "SOH", "STX", "ETX", "EOT", "ENQ", "DLE", "ETB", "SUB"];
 
 let activeGlyphSet: string | null = null; // null = standard (no decorations)
 
@@ -350,6 +352,7 @@ const BACKSLASH_CODES: Record<string, string> = {
   eot: "\u2404",
   enq: "\u2405",
   dle: "\u2410",
+  etb: "\u2417",
   sub: "\u241A",
 };
 
