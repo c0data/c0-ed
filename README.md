@@ -1,6 +1,6 @@
 # C0-ED
 
-Editor extensions for [C0DATA](https://github.com/c0data/c0-cr) — a structured data format using ASCII C0 control codes as delimiters.
+Editor extensions for [C0DATA](https://github.com/c0data) — a structured data format using ASCII C0 control codes as delimiters.
 
 ## Contents
 
