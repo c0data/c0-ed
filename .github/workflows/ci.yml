@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: Compile the VS Code extension
+        working-directory: vscode
+        run: |
+          npm install
+          npx tsc -p ./
+      - name: Validate TextMate grammar JSON
+        run: |
+          python3 -c "import json; json.load(open('textmate/c0data.tmLanguage.json')); json.load(open('vscode/syntaxes/c0data.tmLanguage.json')); print('grammar JSON valid')"
